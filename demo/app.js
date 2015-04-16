@@ -8,11 +8,11 @@
  * Controller of the qiniuUploadApp
  */
 angular.module('qiniuUploadApp', ['angularQFileUpload', 'LocalStorageModule'])
-	.controller('MainCtrl', function ($scope, $log, $qupload) {
+	.controller('MainCtrl', function($scope, $log, $qupload) {
 
 		$scope.selectFiles = [];
 
-		var start = function (index) {
+		var start = function(index) {
 			$scope.selectFiles[index].progress = {
 				p: 0
 			};
@@ -21,21 +21,21 @@ angular.module('qiniuUploadApp', ['angularQFileUpload', 'LocalStorageModule'])
 				file: $scope.selectFiles[index].file,
 				token: '<your qiniu UpToken>'
 			});
-			$scope.selectFiles[index].upload.then(function (response) {
+			$scope.selectFiles[index].upload.then(function(response) {
 				$log.info(response);
-			}, function (response) {
+			}, function(response) {
 				$log.info(response);
-			}, function (evt) {
+			}, function(evt) {
 				$scope.selectFiles[index].progress.p = Math.floor(100 * evt.loaded / evt.totalSize);
 			});
 		};
 
-		$scope.abort = function (index) {
+		$scope.abort = function(index) {
 			$scope.selectFiles[index].upload.abort();
 			$scope.selectFiles.splice(index, 1);
 		};
 
-		$scope.onFileSelect = function ($files) {
+		$scope.onFileSelect = function($files) {
 			var offsetx = $scope.selectFiles.length;
 			for (var i = 0; i < $files.length; i++) {
 				$scope.selectFiles[i + offsetx] = {

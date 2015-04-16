@@ -1,11 +1,11 @@
 {
-	"name": "angular-qiniu-upload",
-	"version": "0.0.4",
-	"homepage": "https://github.com/icattlecoder/angularQFileUpload/blob/master/README.md",
+	"name": "angular-qiniu-upload-fork",
+	"version": "0.0.1",
+	"homepage": "https://github.com/BenBBear/angularQFileUpload/blob/master/README.md",
 	"authors": [
-		"icattlecoder <icattlecoder@gmail.com>"
+		"Xinyu Zhang  <beviszhang1993@gmail.com>"
 	],
-	"description": "AngularJS qiniu cloud storage large file upload service with support resumble,progress",
+	"description": "AngularJS qiniu cloud storage large file upload service with support resumble, progress.  Same code with  https://github.com/icattlecoder/angularQFileUpload but use ngstorage as dependency but not angular-local-storage",
 	"main": "./src/qupload.js",
 	"keywords": [
 		"AngularJS",
@@ -23,11 +23,11 @@
 		"Gruntfile.js"
 	],
 	"dependencies": {
-		"angularjs": "~1.2.16",
-		"angular-local-storage": "0.1.4"
+	    "angularjs": "~1.2.16",
+	    "ngstorage": "~0.3.0"
 	},
 	"devDependencies": {
 		"angularjs": "*",
-		"angular-local-storage": ">0.1.4"
+		"ngstorage": "~0.3.0"
 	}
 }
