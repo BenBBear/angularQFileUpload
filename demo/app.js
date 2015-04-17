@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the qiniuUploadApp
  */
-angular.module('qiniuUploadApp', ['angularQFileUpload', 'LocalStorageModule'])
+angular.module('qiniuUploadApp', ['angularQFileUpload'])
 	.controller('MainCtrl', function($scope, $log, $qupload) {
 
 		$scope.selectFiles = [];
@@ -17,9 +17,9 @@ angular.module('qiniuUploadApp', ['angularQFileUpload', 'LocalStorageModule'])
 				p: 0
 			};
 			$scope.selectFiles[index].upload = $qupload.upload({
-				key: '<your qiniu file key>',
+				key: 'test',
 				file: $scope.selectFiles[index].file,
-				token: '<your qiniu UpToken>'
+				token: 'Gt9skxqDG0eNdra5nZaQGq6bt11n5DP8e9z6djkj:58XaRXCC-6Etxj6nWxWOFJK89XM=:eyJzY29wZSI6InlvZGEiLCJkZWFkbGluZSI6MTQyOTI0MDQ4MH0='
 			});
 			$scope.selectFiles[index].upload.then(function(response) {
 				$log.info(response);
