@@ -1,7 +1,7 @@
 angularQFileUpload
 ==================
 
-> **与 https://github.com/BenBBear/angularQFileUpload/ 代码相同, 但把angular-local-storage 的依赖换成了ngstorage**
+> **与 https://github.com/icattlecoder/angularQFileUpload 代码相同, 但把angular-local-storage 的依赖换成了ngstorage**
 
 AngularJS qiniu cloud storage large file upload service with support resumble,progress based on html5 file blob reader
 
